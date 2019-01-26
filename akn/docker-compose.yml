@@ -1,0 +1,78 @@
+version: '2'
+
+networks:
+  custom:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.65.0/24
+services:
+  ctrl:
+    image: arunnadda/ubuntu-ansible-c:v0.1
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./code:/workspace
+    networks:
+      custom:
+        ipv4_address: 192.168.65.10
+    dns: 8.8.8.8
+    domainname: akn.test
+    hostname: ctrl
+    restart: always
+  lb01:
+    image: arunnadda/centos6-ansible:v0.2
+    ports:
+       - "80:80"
+    networks:
+      custom:
+        ipv4_address: 192.168.65.11
+    dns: 8.8.8.8
+    domainname: akn.test
+    hostname: lb01
+    restart: always
+  app01:
+    image: arunnadda/centos6-ansible:v0.2
+    ports:
+       - "81:80"
+    networks:
+      custom:
+        ipv4_address: 192.168.65.12
+    dns: 8.8.8.8
+    domainname: akn.test
+    hostname: app01
+    restart: always
+  app02:
+    image: arunnadda/centos6-ansible:v0.2
+    ports:
+      - "82:80"
+    networks:
+      custom:
+        ipv4_address: 192.168.65.13
+    dns: 8.8.8.8
+    domainname: akn.test
+    hostname: app02
+    restart: always
+  app03:
+    image: arunnadda/ubuntu16-ansible:v0.1
+    ports:
+      - "83:80"
+    networks:
+      custom:
+        ipv4_address: 192.168.65.15
+    dns: 8.8.8.8
+    domainname: akn.test
+    hostname: app03
+    restart: always
+  db01:
+    image: arunnadda/centos6-ansible:v0.2
+    ports:
+      - "3306:3306"
+    networks:
+      custom:
+        ipv4_address: 192.168.65.14
+    dns: 8.8.8.8
+    domainname: akn.test
+    hostname: db01
+    restart: always
