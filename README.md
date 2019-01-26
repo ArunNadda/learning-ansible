@@ -19,11 +19,16 @@
   https://github.com/NaturalHistoryMuseum/scratchpads2/wiki/Install-Docker-and-Docker-Compose-(Centos-7)
   ```
   
-  ## OPtion 2: Install docker directly on Linux or Mac (If you have mac or linux machine).
+  ## Option 2: Install docker directly on Linux/Mac (If you have mac/linux machine).
   ```
   Docker: https://www.docker.com
   ```
  
 
+## set up docker instances for lab
 
+## Clone code from github repo
+
+```
+```
 
