@@ -59,7 +59,7 @@ Starting akn_app02_1  ... done
 ```
 ###### Above command will start 6 docker instances.
 
-####### check running docker instances using below command:
+###### check running docker instances using below command:
 
 ```
 # docker ps
