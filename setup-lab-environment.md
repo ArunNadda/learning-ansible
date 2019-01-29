@@ -23,14 +23,20 @@
   ```
   Docker: https://www.docker.com
   ```
- 
+# ======================================================================== 
 
 ## set up docker instances for lab
 
 1. Login to centos VM using putty with root user
-2. Clone github repo with code to set up lab env
+2. install git
+3. Clone github repo with code to set up lab env
 
 ```
+-- install git
+# yum install -y git
+
+-- clone repo
+
 # cd /root
 # git clone https://github.com/ArunNadda/learning-ansible.git
 ```
@@ -38,7 +44,7 @@
 ## Start docker lab environment
 
 ```
-# cd akn
+# cd learning-ansible/akn
 # docker-compose up -d
 
 example:
