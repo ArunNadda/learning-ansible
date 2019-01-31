@@ -66,6 +66,14 @@ Starting akn_app02_1  ... done
 
 ```
 
+###### Details about environment:
+- 1 Ansible Control Node (ubuntu): akn_ctrl_1 (ctrl)
+- 1 db node (centos): akn_db01_1 (db01)
+- 1 lb node (centos): akn_lb01_1 (lb01)
+- 3 app nodes (2 centos and 1 ubuntu): akn_app0[123]_1 (app0[123])
+
+all these nodes should be dns resolvable and pingable between docker environment. We will spend most of our time on "ctrl" node, on which ansible is installed.
+
 
 ## How to login to docker instances
 
