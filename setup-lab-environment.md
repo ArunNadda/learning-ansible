@@ -60,10 +60,10 @@ Starting akn_app02_1  ... done
 ###### Above command will create and start 6 docker instances.
 
 
-###### to check all running insances use "docker-compose ps"
-###### to stop all instances (without destroying these) use "docker-compose stop"
-###### to start all instances use "docker-compose start"
-###### to destroy lab environment use "docker-compose down"
+###### - to check all running insances use "docker-compose ps"
+###### - to stop all instances (without destroying these) use "docker-compose stop"
+###### - to start all instances use "docker-compose start"
+###### - to destroy lab environment use "docker-compose down"
 
 ###### Ex:
 ```
