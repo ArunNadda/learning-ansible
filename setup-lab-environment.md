@@ -57,9 +57,45 @@ Recreating akn_ctrl_1 ... done
 Starting akn_app01_1  ... done
 Starting akn_app02_1  ... done
 ```
-###### Above command will start 6 docker instances.
+###### Above command will create and start 6 docker instances.
 
-###### check running docker instances using below command:
+
+###### to check all running insances use "docker-compose ps"
+###### to stop all instances (without destroying these) use "docker-compose stop"
+###### to start all instances use "docker-compose start"
+###### to destroy lab environment use "docker-compose down"
+
+###### Ex:
+```
+root@centos1 akn]# docker-compose ps
+   Name               Command           State               Ports
+------------------------------------------------------------------------------
+akn_app01_1   /bin/bash /bootstrap.sh   Up      22/tcp, 0.0.0.0:81->80/tcp
+akn_app02_1   /bin/bash /bootstrap.sh   Up      22/tcp, 0.0.0.0:82->80/tcp
+akn_app03_1   /usr/sbin/sshd -D         Up      22/tcp, 0.0.0.0:83->80/tcp
+akn_ctrl_1    /entrypoint.sh            Up      22/tcp, 0.0.0.0:8000->8000/tcp
+akn_db01_1    /bin/bash /bootstrap.sh   Up      22/tcp, 0.0.0.0:3306->3306/tcp
+akn_lb01_1    /bin/bash /bootstrap.sh   Up      22/tcp, 0.0.0.0:80->80/tcp
+root@centos1 akn]#
+root@centos1 akn]#
+root@centos1 akn]# docker-compose  stop
+Stopping akn_ctrl_1  ... done
+Stopping akn_app03_1 ... done
+Stopping akn_db01_1  ... done
+Stopping akn_app02_1 ... done
+Stopping akn_app01_1 ... done
+Stopping akn_lb01_1  ... done
+root@centos1 akn]# docker-compose  start
+Starting ctrl  ... done
+Starting lb01  ... done
+Starting app01 ... done
+Starting app02 ... done
+Starting app03 ... done
+Starting db01  ... done
+root@centos1 akn]#
+
+```
+###### check running docker instances using "docker" command:
 
 ```
 # docker ps
