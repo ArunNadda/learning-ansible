@@ -223,4 +223,4 @@ ansible 2.6.3
 
 ```
 
-#### Ansible installed, ready to rock!
+# Ansible installed, ready to rock!
