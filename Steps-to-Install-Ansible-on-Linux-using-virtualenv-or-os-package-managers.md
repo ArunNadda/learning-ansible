@@ -31,6 +31,11 @@
 
 
 #### 1. Step to install Ansible using virtualenv and pip
+##### installing Ansible using virtualenv has multiple advantages on other methods. 
+###### - can install multiple versions of Ansible
+###### - non root user can control ansible versions for her
+###### - upgrade path is easier using pip
+###### - supports almost all OS'es.
 
 ##### Install virtualenv:
 
