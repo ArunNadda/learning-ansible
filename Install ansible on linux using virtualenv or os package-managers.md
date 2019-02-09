@@ -13,13 +13,13 @@
 
 ## System Requirements
 
-## Controlling Machine
+## Control Machine
 ###### Ansible can run on any machine which has Python 2.6 or 2.7 installed.
 ###### Supports Red Hat, Debian, CentOS, OS X, any of the BSDs.
 
 ## Client Nodes
 ###### Client machines should at least have Python 2 (version 2.6 or later) or Python 3 (version 3.5 or later)
-###### If you have SELinux enabled on remote nodes, you will have to install libselinux-python package on nodes before using any copy/file/template related functions in Ansible
+###### If you have SELinux enabled on remote nodes, libselinux-python package is required on nodes before using any copy/file/template related functions in Ansible
 
 ## Install Ansible on CentOS 7 / RHEL 7 / Ubuntu 18.04 / 16.04 & Debian 9
 
@@ -35,26 +35,26 @@
 ##### Install virtualenv:
 
 ###### RHEL/CentOS 7
-###### On RHEL/CentOS, you can install by using yum.
+###### On RHEL/CentOS, using yum.
 ```
 sudo yum install python-virtualenv
 ```
 
 ###### Ubuntu/Debian
-###### On Ubuntu/Debian, you can install by using apt.
+###### On Ubuntu/Debian, using apt.
 ```
 sudo apt install python-virtualenv
 ```
 
 #### Set up virtualenv:
 
-###### After virtualenv installation, you can create a "virtual environment" to host local copy of Ansible.
+###### After virtualenv installation, create a "virtual environment" to host local copy of Ansible.
 
 ```
 # virtualenv myansible
 ```
 
-###### This command creates a directory called myansible in  current working directory, it contains a copy of Python that will install modules in the myansible directory. This keeps them separate from other modules.
+###### This command creates a directory called myansible in  current working directory, it contains a copy of Python that will install modules(libraries) in the myansible directory. This provides a totaly separate environment of python.
 ###### To use this new location, it must be activated.
 
 ```
@@ -68,8 +68,8 @@ sudo apt install python-virtualenv
 ```
 
 ###### Now that the virtualenv is active, all future Python commands (such as pip) will install modules into the virtualenv.
-###### Let's install Ansible to make it possible to use the modules.
-###### First, make sure to upgrade pip to latest version and install Ansible.
+###### install Ansible in this virtual env.
+###### First, make sure to upgrade pip to latest version and then install Ansible.
 
 ```
 (myansible) $ pip install --upgrade pip
@@ -170,7 +170,7 @@ ansible 2.3.0.0
 
 ### Steps to install using OS package-managers (e.g. yum or apt):
 
-##### To install Ansible, we will have to Enable EPEL repository on CentOS 7/RHEL 7 and ppa repository for ubuntu/debian.
+##### To install Ansible, EPEL repository should be enabled on CentOS 7/RHEL 7 and ppa repository is required for ubuntu/debian.
 
 ```
 ### CentOS 7 ###
@@ -222,3 +222,5 @@ ansible 2.6.3
   python version = 2.7.5 (default, Jul 13 2018, 13:06:57) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
 
 ```
+
+#### Ansible installed, ready to rock!
