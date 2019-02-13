@@ -13,6 +13,8 @@
   ```
   https://www.youtube.com/watch?v=IIKmTSuP15M
   ```
+  ###### installing minimal centos7 image should be enough. Running VM with full image requires more resources.
+  
   
   ## Install docker and docker-compose on centos 7
   ```
