@@ -1,0 +1,25 @@
+[ctrl]
+ctrl       ansible_connection=local
+
+[app]
+app01
+app02
+app03
+
+[db]
+db01
+
+[lb]
+lb01
+
+[prod:children]
+app
+db
+
+[centos]
+app0[1:2]
+db01
+lb01
+
+[ubuntu]
+app03
