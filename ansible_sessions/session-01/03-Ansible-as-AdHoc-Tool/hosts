@@ -3,7 +3,7 @@ ctrl       ansible_connection=local
 
 [app]
 app01
-app02
+app02 ansible_port=2222
 app03
 
 [db]
