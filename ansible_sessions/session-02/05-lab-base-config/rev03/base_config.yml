@@ -1,0 +1,31 @@
+---
+  - name: base system configuration for all linux servers
+    hosts: prod
+    become: true
+    tasks:
+      - name: create ansible user with uid 5006
+        user:
+          name: ansible
+          state: present
+          uid: 5006
+
+      - name: remove user user2 if present
+        user:
+          name: user2
+          state: absent
+
+      - name: install vim
+        package:
+          name: vim
+          state: present
+
+      - name: install ntp
+        package:
+          name: ntp
+          state: present
+
+      - name: start ntp service
+        service:
+          name: ntpd
+          state: started
+...
