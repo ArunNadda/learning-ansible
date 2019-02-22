@@ -1,0 +1,17 @@
+[control]
+ctrl       ansible_connection=local
+
+[app]
+app01
+app02:2222
+app03  ansible_user=ansible
+
+[db]
+db01
+
+[lb]
+lb01
+
+[prod:children]
+app
+db
