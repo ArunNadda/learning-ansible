@@ -1,8 +1,0 @@
----
-# Every YAML file should start with three dashes
-
-key_1: value_1
-- list_entry_1
-
-# Every YAML file should end with three dots
-...

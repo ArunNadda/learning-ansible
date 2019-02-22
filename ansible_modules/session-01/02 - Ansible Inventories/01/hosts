@@ -1,5 +1,0 @@
-[ctrl]
-ctrl       ansible_connection=local
-
-[app]
-app01
