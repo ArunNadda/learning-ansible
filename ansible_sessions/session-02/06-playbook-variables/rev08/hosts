@@ -1,0 +1,20 @@
+[control]
+ctrl ansible_connection=local
+
+[lb]
+lb01
+
+[app]
+app01
+app02 ansible_port=2222
+app03
+
+
+[db]
+db01
+
+[prod:children]
+lb
+app
+db
+
