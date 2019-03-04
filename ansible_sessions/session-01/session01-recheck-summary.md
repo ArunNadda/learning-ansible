@@ -2,6 +2,9 @@
 ## ===================
 
 #### -- check if session-01 changes are present?
+##### does passwordless ssh still working?
+##### does app02 ssh port still configured to listen on 2222
+
 #### -- to make all changes consistent, docker instances should be shutdown using docker-compose stop every time
 
 ```
