@@ -1,5 +1,5 @@
 ## session-01 Recheck:
-## ===================
+
 
 #### -- check if session-01 changes are present?
 ##### does passwordless ssh still working?
@@ -50,7 +50,7 @@ cd /workspace
 
 
 
-#### Some more commands to try
+### Some more commands to try
 
 ```
 ansible all --list-hosts
