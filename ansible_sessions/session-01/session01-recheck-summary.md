@@ -1,11 +1,11 @@
-## session-01 Recheck:
+# session-01 Recheck:
 
 
-#### -- check if session-01 changes are present?
+### -- check if session-01 changes are present?
 ##### does passwordless ssh still working?
 ##### does app02 ssh port still configured to listen on 2222
 
-#### -- to make all changes consistent, docker instances should be shutdown using docker-compose stop every time
+### -- to make all changes consistent, docker instances should be shutdown using docker-compose stop every time
 
 ```
 # cd /root/learning-ansible/akn/
@@ -13,7 +13,7 @@
 ```
 
 
-### How to bring it lab to status where it was left at last session.
+## How to bring it lab to status where it was left at last session.
 
 #### login to control node:
 
@@ -45,12 +45,12 @@ cd /workspace
 
 #### check app02 is running sshd on port 2222, if not configure it to run on 2222
 
-#### homework:
+## homework:
 #### create ansible user and ansible group on host app03 with sudo access.
 
 
 
-### Some more commands to try
+## Some more commands to try
 
 ```
 ansible all --list-hosts
