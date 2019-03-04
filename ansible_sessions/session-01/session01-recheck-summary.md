@@ -45,7 +45,7 @@ cd /workspace
 
 #### check app02 is running sshd on port 2222, if not configure it to run on 2222
 
-## homework:
+## Practice:
 #### create ansible user and ansible group on host app03 with sudo access.
 
 
