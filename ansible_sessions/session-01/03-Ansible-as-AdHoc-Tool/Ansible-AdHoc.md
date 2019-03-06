@@ -91,9 +91,9 @@ ansible app01 -m setup
 
 ##### create group:
 ```
-ansible all -s -m group -a "name=ansible state=present"
-ansible all -b -m group -a "name=ansible state=present"
-ansible all -b -m group -a "name=ansible state=present gid=1001"
+ansible prod -s -m group -a "name=ansible state=present"
+ansible prod -b -m group -a "name=ansible state=present"
+ansible prod -b -m group -a "name=ansible state=present gid=1001"
 ```
 
 ##### user module
@@ -119,7 +119,6 @@ ansible prod -b -m user -a "name=ansible group=ansible createhome=yes"
 
 
 #####  check source code of say copy module (.py file)
-'''
-cd 
+```
 ansible-doc copy
-'''
+```
