@@ -1,5 +1,5 @@
 [control]
-ctrl ansible_connection=local
+ctrl       ansible_connection=local
 
 [centos]
 app01

@@ -8,7 +8,7 @@ app02 ansible_port=2222
 [ubuntu]
 app03
 
-[vars]
+[all:vars]
 ansible_become=true
 
 [linux:children]

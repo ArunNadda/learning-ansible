@@ -53,8 +53,11 @@ ansible --version
 ```
 sudo chown ansible:ansible /workspace
 
+su - ansible 
+
 cd /workspace
+
+git clone https://github.com/ArunNadda/learning-ansible.git
 
 ```
 
-git clone https://github.com/ArunNadda/ansible_module_01.git

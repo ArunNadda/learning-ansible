@@ -47,8 +47,10 @@ ansible all -m ping -u user1
 
 ```
 ##### copy it to all other hosts under user1:
-##### for i in `cat all_hosts`; do echo $i; ssh-copy-id user1@$i; done
-
+##### 
+```
+for i in `cat all_hosts`; do echo $i; ssh-copy-id user1@$i; done
+```
 
 ---
 #### 02:
