@@ -1,0 +1,16 @@
+[control]
+ctrl ansible_connection=local
+
+[centos]
+app01
+app02 ansible_port=2222
+
+[ubuntu]
+app03
+
+[all:vars]
+ansible_become=true
+
+[linux:children]
+centos
+ubuntu

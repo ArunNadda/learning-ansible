@@ -1,0 +1,29 @@
+---
+# YAML documents begin with ---
+
+# The minus in YAML this indicates a list item.  The playbook
+# contains a list of plays, with each play being a dictionary
+-
+
+  # name of the play
+  name: MOTD play
+  # Target: where our play will run and options it will run with
+  hosts: centos
+  user: user1
+  gather_facts: false
+
+  # Variable: variables that will apply to the play, on all target systems
+
+  # Task: the list of tasks that will be executed within the play,
+  # this section can also be used for pre and post tasks
+  tasks:
+    - name: Configure a MOTD (message of the day)
+      copy:
+        content: Welcome to CentOS Linux - Ansible Rocks
+        dest: /etc/motd
+  # Handlers: handlers that are executed as a notify key from a task
+
+  # Roles: list of roles to be imported into the play
+
+# Three dots indicate the end of a YAML document
+...
