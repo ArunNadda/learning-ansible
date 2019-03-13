@@ -4,29 +4,16 @@
    become: true
    tasks:
      - name: add nginx repository
-       yum_repository:
-         name: ngnix
-         description: ngnix repository
-         baseurl: http://nginx.org/packages/centos/6/x86_64/
-         gpgcheck: no
+       
 
      - name: install nginx
-       package:
-         name: nginx
-         state: present
-
+       
      - name: start nginx
-       service:
-         name: nginx
-         state: started
+       
 
      - name: install git
-       package:
-         name: git
-         state: present
+     
 
      - name: deploy html
-       git:
-         repo: 'https://github.com/ArunNadda/ngnix-sample-html-app.git'
-         dest: /usr/share/nginx/html/app
+       
 ...
