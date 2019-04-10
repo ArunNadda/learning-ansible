@@ -1,0 +1,34 @@
+---
+  - name: install apache on app servers
+    hosts: app
+    become: true
+
+    tasks:
+      - name: install apache web server
+        package: 
+          name: httpd
+          state: present
+
+      - name: start apache web server 
+        service:
+          name: httpd
+          state: started
+          enabled: true
+
+      - name: copy apache config file to /etc/ 
+        copy: 
+          src: helper/httpd.conf
+          dest: /etc/httpd.conf
+          owner: root
+          group: root
+          mode: 644
+        notify:
+          - restart httpd service 
+
+# handlers file for apache
+    handlers: 
+      - name: restart httpd service
+        service:
+          name: httpd
+          state: restarted
+...      

@@ -1,0 +1,10 @@
+---
+  - name: apt cache update
+    hosts: app03
+    become: true
+    tasks:
+      - name: using apt
+        apt:
+          upgrade: yes
+          update_cache: yes
+          cache_valid_time: 86400 #One day

@@ -1,0 +1,38 @@
+---
+  - name: install frontend application on app nodes
+    hosts: app
+    become: true
+    tasks:
+      - name: create app directory
+        file:
+          path: /opt/app
+          owner: apache
+          group: apache
+          mode: 0755
+          state: directory
+        
+      - name: create release path
+        file:  
+          path: /opt/app/release
+          owner: apache
+          group: apache
+          mode: 0755
+          state: directory
+      
+      - name: Download and extract the release
+        unarchive:
+          src: https://github.com/ArunNadda/ansible-demo-app/archive/1.0.tar.gz
+          dest: /opt/app/release
+          owner: apache
+          group: apache
+          creates: /opt/app/release/ansible-demo-app-1.0
+          remote_src: yes
+      
+      - name: create a symlink
+        file:
+          src: /opt/app/release/ansible-demo-app-1.0
+          dest: /var/www/html/app
+          owner: apache
+          group: apache
+          state: link
+...

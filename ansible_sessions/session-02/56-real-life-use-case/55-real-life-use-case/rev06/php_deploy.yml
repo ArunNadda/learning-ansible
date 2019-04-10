@@ -1,0 +1,22 @@
+---
+  - name: install php on app servers
+    hosts: app
+    become: true
+    tasks: 
+      - name: install php
+        package: 
+          name: "{{ item }}"
+          state: present
+        with_items:
+           - php
+           - php-mysql
+           - php-devel
+           - nmap
+        notify: restart httpd service
+    handlers: 
+      - name: restart httpd service
+        service: 
+          name: httpd
+          state: restarted
+          
+...

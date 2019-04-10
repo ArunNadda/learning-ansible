@@ -1,0 +1,17 @@
+[control]
+ctrl
+
+[lb]
+lb01
+
+[app]
+app0[1:3]
+
+
+[db]
+db01
+
+[prod:children]
+lb
+app
+db
